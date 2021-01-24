@@ -2,17 +2,22 @@
 import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
 import { data } from './data';
-import { Parallax, Hover } from './index';
+import { Parallax, Hover, Sliders } from './index';
 import './Flip.css';
 
-const Flip = () => {
+const Flip = (props) => {
 	const [flipped, set] = useState(false);
 	const [item, setItem] = useState();
+	const { state, handleSlide } = props;
 
 	const { transform, opacity } = useSpring({
 		opacity: flipped ? 1 : 0,
 		transform: `perspective(900px) rotateX(${flipped ? 180 : 0}deg)`,
-		config: { mass: 5, tension: 500, friction: 80 },
+		config: {
+			mass: state.mass,
+			tension: state.tension,
+			friction: state.friction,
+		},
 	});
 
 	const handleClick = (e) => {
@@ -23,6 +28,8 @@ const Flip = () => {
 
 	return (
 		<div id="flip">
+			<h2>Flip Spring</h2>
+			<Sliders state={state} handleSlide={handleSlide} />
 			{!!item ? (
 				<></>
 			) : (
