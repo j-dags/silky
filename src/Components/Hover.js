@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSpring, animated as a } from 'react-spring';
 import './Hover.css';
 
@@ -21,8 +21,19 @@ const Hover = (props) => {
 			tension: hoverSpr.tension,
 			friction: hoverSpr.friction,
 		},
-		// reset: true,
 	}));
+
+	// Update spring if slider changes properties
+	useEffect(() => {
+		set(() => ({
+			xys: [0, 0, 1],
+			config: {
+				mass: hoverSpr.mass,
+				tension: hoverSpr.tension,
+				friction: hoverSpr.friction,
+			},
+		}));
+	}, [set, hoverSpr]);
 
 	return (
 		<div id="hover">

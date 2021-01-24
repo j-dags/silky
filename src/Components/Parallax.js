@@ -27,7 +27,17 @@ const Parallax = (props) => {
 			setGradient(item.css.replace('135deg', '315deg'));
 			setDescription(item.description.replace(' ', ' → '));
 		}
-	}, [item]);
+
+		// Update spring if slider changes properties
+		set(() => ({
+			xys: [0, 0, 1],
+			config: {
+				mass: parallaxSpr.mass,
+				tension: parallaxSpr.tension,
+				friction: parallaxSpr.friction,
+			},
+		}));
+	}, [item, set, parallaxSpr]);
 
 	return !item ? (
 		<></>
