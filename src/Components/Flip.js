@@ -1,16 +1,12 @@
 /* eslint-disable */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
-import { Item } from './styles';
 import { data } from './data';
-// import Springs from './Springs';
-import Parallax from './Parallax';
+import { Parallax, Hover } from './index';
 import './Flip.css';
 
 const Flip = () => {
 	const [flipped, set] = useState(false);
-	const [name, setName] = useState(null);
-	const [scroll, setScroll] = useState(null);
 	const [item, setItem] = useState();
 
 	const { transform, opacity } = useSpring({
@@ -25,25 +21,8 @@ const Flip = () => {
 		set(!flipped);
 	};
 
-	useEffect(() => {
-		window.addEventListener('scroll', () => {
-			setScroll(window.scrollY > 200);
-		});
-	}, []);
-
-	console.log('item > ', item);
 	return (
 		<div id="flip">
-			{/* <a.div
-				className="c back"
-				style={{
-					opacity: opacity.interpolate((o) => 1 - o),
-					transform,
-					'background-image': `url(${back})`,
-				}}
-			>
-				text
-			</a.div> */}
 			{!!item ? (
 				<></>
 			) : (
@@ -52,20 +31,18 @@ const Flip = () => {
 					style={{
 						opacity: opacity.interpolate((o) => 1 - o),
 						transform,
-						// width: flipped ? '0%' : '100%',
 					}}
 				>
 					<div id="cards">
 						{data.map((item) => (
-							<Item
+							<Hover
 								key={item.name}
-								description={item.description}
-								style={{ background: item.css }}
-								onClick={() => handleClick(item)}
+								item={item}
+								css={item.css}
+								handleClick={handleClick}
 							/>
 						))}
 					</div>
-					{/* <Springs onClick={(e) => console.log(e)} /> */}
 				</a.div>
 			)}
 			{!item ? (
@@ -77,7 +54,6 @@ const Flip = () => {
 						opacity,
 						transform: transform.interpolate((t) => `${t} rotateX(180deg)`),
 						backgroundImage: item.css,
-						// width: flipped ? '100%' : '0%',
 					}}
 					onClick={() => handleClick()}
 				>

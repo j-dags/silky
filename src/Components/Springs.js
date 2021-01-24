@@ -1,10 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { render } from 'react-dom';
 import { useTransition, useSpring, useChain, config } from 'react-spring';
-import { Global, Container, Item } from './styles';
+import { Global, Container, Item } from './Styles';
 import { data } from './data';
 
-export default function App() {
+export default function Springs() {
 	const [open, set] = useState(false);
 
 	// CONTAINER ANIMATION
@@ -35,18 +34,24 @@ export default function App() {
 
 	return (
 		<>
-			<Global />
-			<Container
-				style={{ ...rest, width: size, height: size }}
-				onClick={() => set(!open)}
+			<div
+				id="page"
+				onClick={(e) => {
+					if (e.target.id === 'page') set(false);
+					// console.log(e.target.id);
+				}}
 			>
-				{transitions.map(({ item, key, props }) => (
-					<Item key={key} style={{ ...props, background: item.css }} />
-					// <Item key={key} />
-				))}
-			</Container>
+				<Global />
+				<Container
+					style={{ ...rest, width: size, height: size }}
+					onClick={() => set(true)}
+				>
+					{transitions.map(({ item, key, props }) => (
+						<Item key={key} style={{ ...props, background: item.css }} />
+						// <Item key={key} />
+					))}
+				</Container>
+			</div>
 		</>
 	);
 }
-
-render(<App />, document.getElementById('root'));
