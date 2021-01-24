@@ -9,12 +9,16 @@ const trans2 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
 const Parallax = (props) => {
 	const [gradient, setGradient] = useState('');
 	const [description, setDescription] = useState('');
-	const { item } = props;
+	const { item, parallaxSpr } = props;
 
 	// DEFINE SPRING
 	const [spring, set] = useSpring(() => ({
 		xy: [0, 0],
-		config: { mass: 10, tension: 550, friction: 140 },
+		config: {
+			mass: parallaxSpr.mass,
+			tension: parallaxSpr.tension,
+			friction: parallaxSpr.friction,
+		},
 	}));
 
 	// ROTATE GRADIENT DIRECTION

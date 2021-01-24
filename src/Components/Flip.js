@@ -8,15 +8,22 @@ import './Flip.css';
 const Flip = (props) => {
 	const [flipped, set] = useState(false);
 	const [item, setItem] = useState();
-	const { state, handleSlide } = props;
+	const {
+		flipSpr,
+		handleFlip,
+		hoverSpr,
+		handleHover,
+		parallaxSpr,
+		handleParallax,
+	} = props;
 
 	const { transform, opacity } = useSpring({
 		opacity: flipped ? 1 : 0,
 		transform: `perspective(900px) rotateX(${flipped ? 180 : 0}deg)`,
 		config: {
-			mass: state.mass,
-			tension: state.tension,
-			friction: state.friction,
+			mass: flipSpr.mass,
+			tension: flipSpr.tension,
+			friction: flipSpr.friction,
 		},
 	});
 
@@ -28,8 +35,20 @@ const Flip = (props) => {
 
 	return (
 		<div id="flip">
-			<h2>Flip Spring</h2>
-			<Sliders state={state} handleSlide={handleSlide} />
+			<div id="settings">
+				<div className="setting">
+					<h2>Flip Spring</h2>
+					<Sliders state={flipSpr} handleSlide={handleFlip} />
+				</div>
+				<div className="setting">
+					<h2>Hover Spring</h2>
+					<Sliders state={hoverSpr} handleSlide={handleHover} />
+				</div>
+				<div className="setting">
+					<h2>Parallax Spring</h2>
+					<Sliders state={parallaxSpr} handleSlide={handleParallax} />
+				</div>
+			</div>
 			{!!item ? (
 				<></>
 			) : (
@@ -46,7 +65,9 @@ const Flip = (props) => {
 								key={item.name}
 								item={item}
 								css={item.css}
+								hoverSpr
 								handleClick={handleClick}
+								hoverSpr={hoverSpr}
 							/>
 						))}
 					</div>
@@ -64,7 +85,7 @@ const Flip = (props) => {
 					}}
 					onClick={() => handleClick()}
 				>
-					<Parallax item={item} />
+					<Parallax item={item} parallaxSpr={parallaxSpr} />
 				</a.div>
 			)}
 		</div>

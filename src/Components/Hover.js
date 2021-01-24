@@ -11,12 +11,17 @@ const trans = (x, y, s) =>
 	`perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const Hover = (props) => {
-	const { css, item, handleClick } = props;
+	const { css, item, handleClick, hoverSpr } = props;
 
 	// DEFINE SPRING
 	const [spring, set] = useSpring(() => ({
 		xys: [0, 0, 1],
-		config: { mass: 5, tension: 350, friction: 40 },
+		config: {
+			mass: hoverSpr.mass,
+			tension: hoverSpr.tension,
+			friction: hoverSpr.friction,
+		},
+		// reset: true,
 	}));
 
 	return (
