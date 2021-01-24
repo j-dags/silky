@@ -1,11 +1,12 @@
 /* eslint-disable */
 
 import './App.css';
-import { Flip } from './Components';
+import { Flip, Navbar } from './Components';
 
 function App() {
 	return (
 		<>
+			<Navbar />
 			<Flip />
 		</>
 	);

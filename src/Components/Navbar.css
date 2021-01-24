@@ -1,0 +1,14 @@
+h1 {
+	font-size: 4rem;
+	color: white;
+	font-family: 'Chewy', cursive;
+	letter-spacing: 4px;
+	margin-top: 1rem;
+	font-weight: lighter;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	text-align: center;
+}
