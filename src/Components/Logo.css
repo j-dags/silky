@@ -1,0 +1,21 @@
+#logo {
+	width: 150px;
+	height: 150px;
+	/* background: rgba(170, 68, 101, 0.125); */
+	border-radius: 50%;
+	cursor: -webkit-grab;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	white-space: pre;
+}
+
+h1 {
+	font-size: 7rem;
+	color: white;
+	font-family: 'Chewy', cursive;
+	letter-spacing: 4px;
+	margin-top: 1rem;
+	font-weight: lighter;
+}

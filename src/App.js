@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import { Flip, Navbar } from './Components';
+import { Flip, Logo } from './Components';
 import { useState } from 'react';
 import './App.css';
 
@@ -8,7 +8,7 @@ function App() {
 	const [flipSpr, setFlipSPr] = useState({
 		mass: 5,
 		tension: 500,
-		friction: 60,
+		friction: 45,
 	});
 	const [hoverSpr, setHoverSpr] = useState({
 		mass: 3,
@@ -37,19 +37,17 @@ function App() {
 	};
 
 	return (
-		<>
-			<Navbar />
-			<div id="content">
-				<Flip
-					flipSpr={flipSpr}
-					handleFlip={handleFlip}
-					hoverSpr={hoverSpr}
-					handleHover={handleHover}
-					parallaxSpr={parallaxSpr}
-					handleParallax={handleParallax}
-				/>
-			</div>
-		</>
+		<div id="content">
+			<Logo />
+			<Flip
+				flipSpr={flipSpr}
+				handleFlip={handleFlip}
+				hoverSpr={hoverSpr}
+				handleHover={handleHover}
+				parallaxSpr={parallaxSpr}
+				handleParallax={handleParallax}
+			/>
+		</div>
 	);
 }
 

@@ -11,7 +11,7 @@ body,
 }
 
 #content {
-	margin-top: 150px;
+	padding: 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
