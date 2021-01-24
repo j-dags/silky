@@ -33,7 +33,7 @@ const Flip = () => {
 
 	console.log('item > ', item);
 	return (
-		<div>
+		<div id="flip">
 			{/* <a.div
 				className="c back"
 				style={{
