@@ -37,15 +37,15 @@ const Flip = (props) => {
 		<div id="flip">
 			<div id="settings">
 				<div className="setting">
-					<h2>Flip Spring</h2>
+					<h3>Flip Spring</h3>
 					<Sliders state={flipSpr} handleSlide={handleFlip} />
 				</div>
 				<div className="setting">
-					<h2>Hover Spring</h2>
+					<h3>Hover Spring</h3>
 					<Sliders state={hoverSpr} handleSlide={handleHover} />
 				</div>
 				<div className="setting">
-					<h2>Parallax Spring</h2>
+					<h3>Parallax Spring</h3>
 					<Sliders state={parallaxSpr} handleSlide={handleParallax} />
 				</div>
 			</div>
