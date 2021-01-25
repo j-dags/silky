@@ -7,7 +7,7 @@ body,
 	width: 100%;
 	overflow: hidden;
 	user-select: none;
-	background: lightblue;
+	background: #eeeeee;
 }
 
 #content {

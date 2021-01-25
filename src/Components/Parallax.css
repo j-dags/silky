@@ -12,13 +12,14 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	will-change: transform;
+	margin-bottom: 4rem;
 }
 
 .card1 {
 	width: 45vw;
 	height: 45vw;
-	max-width: 45ch;
-	max-height: 45ch;
+	max-width: 38ch;
+	max-height: 38ch;
 	border-radius: 45ch;
 	box-shadow: 0px 10px 10px -5px rgb(0 0 0 / 5%);
 	z-index: 100;
@@ -53,6 +54,6 @@
 
 #description {
 	position: fixed;
-	top: 39rem;
+	top: 30rem;
 	font-size: 1.75rem;
 }

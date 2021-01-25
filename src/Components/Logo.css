@@ -1,13 +1,10 @@
 #logo {
-	width: 150px;
-	height: 150px;
 	/* background: rgba(170, 68, 101, 0.125); */
 	border-radius: 50%;
 	cursor: -webkit-grab;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: white;
 	white-space: pre;
 }
 
@@ -18,4 +15,7 @@ h1 {
 	letter-spacing: 4px;
 	margin-top: 1rem;
 	font-weight: lighter;
+	background: linear-gradient(145deg, #e5b2ca, #7028e4);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

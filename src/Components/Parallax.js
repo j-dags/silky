@@ -39,6 +39,7 @@ const Parallax = (props) => {
 		}));
 	}, [item, set, parallaxSpr]);
 
+	console.log('item > ', item);
 	return !item ? (
 		<></>
 	) : (

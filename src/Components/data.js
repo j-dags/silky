@@ -1,35 +1,15 @@
 // Gradients taken from: https://webgradients.com/
 export const data = [
 	{
-		name: 'Rare Wind',
-		description: '#a8edea #fed6e3',
-		css: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-		// css: 'linear-gradient(135deg, #12c2e9 0%, #c471ed 50%, #f64f59 100%)',
-		height: 200,
-	},
-	{
-		name: 'Deep Blue',
-		description: '#e0c3fc #8ec5fc',
-		css: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
-		height: 400,
-	},
-	{
 		name: 'Saint Petersburg',
 		description: '#f5f7fa #c3cfe2',
 		css: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
 		height: 400,
 	},
 	{
-		name: 'Purple Division',
-		description: '#7028e4 #e5b2ca',
-		css: 'linear-gradient(135deg, #7028e4 0%, #e5b2ca 100%)',
-		height: 400,
-	},
-
-	{
-		name: 'Argon',
-		description: '#fdfbfb #ebedee',
-		css: 'linear-gradient(135deg, #7303c0, #ec38bc, #fdeff9)',
+		name: 'Deep Blue',
+		description: '#e0c3fc #8ec5fc',
+		css: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
 		height: 400,
 	},
 	{
@@ -39,15 +19,39 @@ export const data = [
 		height: 400,
 	},
 	{
-		name: 'Wild Apple',
-		description: '#d299c2 #fef9d7',
-		css: 'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
-		height: 200,
+		name: 'Purple Division',
+		description: '#7028e4 #e5b2ca',
+		css: 'linear-gradient(135deg, #7028e4 0%, #e5b2ca 100%)',
+		height: 400,
+	},
+	{
+		name: 'Lemon Gate',
+		description: '#96fbc4 #f9f586',
+		css: 'linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)',
+		height: 400,
 	},
 	{
 		name: 'Tempting Azure',
 		description: '#84fab0 #8fd3f4',
 		css: 'linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)',
+		height: 200,
+	},
+	{
+		name: 'Pink Flavour',
+		description: '#ffc0cb #800080',
+		css: 'linear-gradient(135deg, #ffc0cb 0%, #800080 100%)',
+		height: 400,
+	},
+	{
+		name: 'Argon',
+		description: '#fdfbfb #ebedee',
+		css: 'linear-gradient(135deg, #7303c0, #ec38bc, #fdeff9)',
+		height: 400,
+	},
+	{
+		name: 'Wild Apple',
+		description: '#d299c2 #fef9d7',
+		css: 'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
 		height: 200,
 	},
 	{
@@ -57,16 +61,11 @@ export const data = [
 		height: 200,
 	},
 	{
-		name: 'Lemon Gate',
-		description: '#96fbc4 #f9f586',
-		css: 'linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)',
-		height: 400,
-	},
-	{
-		name: 'Ladoga Bottom',
-		description: '#ebc0fd #d9ded8',
-		css: 'linear-gradient(135deg, #ebc0fd 0%, #d9ded8 100%)',
-		height: 400,
+		name: 'Relay',
+		description: '#3a1c71 #ffaf7b',
+		css: 'linear-gradient(135deg, #3a1c71 0%, #d76d77 50%,  #ffaf7b 100%)',
+		// css: 'linear-gradient(135deg, #12c2e9 0%, #c471ed 50%, #f64f59 100%)',
+		height: 200,
 	},
 	{
 		name: 'New York',

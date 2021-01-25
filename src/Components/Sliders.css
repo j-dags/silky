@@ -1,8 +1,13 @@
 p,
 label {
-	font: 1rem 'Fira Sans', sans-serif;
+	font: 0.875rem 'Fira Sans', sans-serif;
 }
 
 input {
-	margin: 0.4rem;
+	margin: 0.2rem 0.5rem 0.2rem 0rem;
+	width: 136px;
+}
+
+.slide {
+	display: flex;
 }
