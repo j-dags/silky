@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useSpring, animated as a } from 'react-spring';
-import './Parallax.css'; // // Icons made by Freepik from www.flaticon.com
+import './Parallax.css';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
-const trans2 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`;
+const trans2 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5 - 30}px,0)`;
 
 const Parallax = (props) => {
 	const [gradient, setGradient] = useState('');
@@ -57,7 +57,7 @@ const Parallax = (props) => {
 				/>
 
 				<a.div
-					className="card4"
+					className="card2"
 					style={{ transform: spring.xy.interpolate(trans2) }}
 				>
 					{item.name}

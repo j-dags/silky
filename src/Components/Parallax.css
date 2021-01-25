@@ -3,9 +3,7 @@
 }
 
 .card1,
-.card2,
-.card3,
-.card4 {
+.card2 {
 	position: absolute;
 	border-radius: 5px;
 	background-size: cover;
@@ -26,18 +24,6 @@
 }
 
 .card2 {
-	width: 25ch;
-	height: 25ch;
-}
-
-.card3 {
-	opacity: 0.9;
-	width: 25ch;
-	height: 25ch;
-	background-image: url(https://image.flaticon.com/icons/svg/414/414927.svg);
-}
-
-.card4 {
 	display: grid;
 	place-content: center;
 	font-size: 3rem;
