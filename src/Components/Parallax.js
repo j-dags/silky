@@ -18,6 +18,7 @@ const Parallax = (props) => {
 			mass: parallaxSpr.mass,
 			tension: parallaxSpr.tension,
 			friction: parallaxSpr.friction,
+			velocity: parallaxSpr.velocity,
 		},
 	}));
 
@@ -35,11 +36,12 @@ const Parallax = (props) => {
 				mass: parallaxSpr.mass,
 				tension: parallaxSpr.tension,
 				friction: parallaxSpr.friction,
+				velocity: parallaxSpr.velocity,
 			},
 		}));
 	}, [item, set, parallaxSpr]);
 
-	console.log('item > ', item);
+	console.log('parallaxSpr > ', parallaxSpr);
 	return !item ? (
 		<></>
 	) : (

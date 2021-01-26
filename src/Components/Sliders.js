@@ -39,6 +39,17 @@ function Sliders(props) {
 				/>
 				<label htmlFor="friction">Friction: {state.friction}</label>
 			</div>
+			<div className="slide">
+				<input
+					type="range"
+					id="velocity"
+					name="velocity"
+					min="-50"
+					max="50"
+					defaultValue={state.velocity}
+				/>
+				<label htmlFor="velocity">Velocity: {state.velocity}</label>
+			</div>
 		</div>
 	);
 }

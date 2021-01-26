@@ -24,6 +24,7 @@ const Flip = (props) => {
 			mass: flipSpr.mass,
 			tension: flipSpr.tension,
 			friction: flipSpr.friction,
+			velocity: flipSpr.velocity,
 		},
 	});
 

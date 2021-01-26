@@ -20,6 +20,7 @@ const Hover = (props) => {
 			mass: hoverSpr.mass,
 			tension: hoverSpr.tension,
 			friction: hoverSpr.friction,
+			velocity: hoverSpr.velocity,
 		},
 	}));
 
@@ -31,6 +32,7 @@ const Hover = (props) => {
 				mass: hoverSpr.mass,
 				tension: hoverSpr.tension,
 				friction: hoverSpr.friction,
+				velocity: hoverSpr.velocity,
 			},
 		}));
 	}, [set, hoverSpr]);

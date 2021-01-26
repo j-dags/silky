@@ -9,16 +9,19 @@ function App() {
 		mass: 5,
 		tension: 500,
 		friction: 45,
+		velocity: 0,
 	});
 	const [hoverSpr, setHoverSpr] = useState({
 		mass: 3,
 		tension: 350,
 		friction: 25,
+		velocity: 50,
 	});
 	const [parallaxSpr, setParallaxSpr] = useState({
 		mass: 10,
 		tension: 550,
 		friction: 100,
+		velocity: 0,
 	});
 
 	const handleFlip = (e) => {
